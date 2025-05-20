@@ -327,6 +327,40 @@
             color: var(--light-text);
         }
 
+        .certificates {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .certificates h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .cert-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Reduced min size */
+            justify-items: center;
+        }
+
+        .cert-item img {
+            width: 100%;
+            max-width: 220px;
+            border-radius: 10px;
+            object-fit: cover;       /* Crops inside the box */
+            aspect-ratio: 3 / 2;      /* Maintains shape, adjust if needed */
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+        .cert-item:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
@@ -623,21 +657,48 @@
         </div>
     </section>
 
+
+<!-- Certificate Section -->
+<section class="certificate-section">
+  <h2>My Certificates</h2>
+  <div class="cert-scroll">
+    <!-- Certificate 1 -->
+    <a href="https://www.credly.com/earner/earned/badge/29fe7e70-acbe-49e5-a529-5767c55884e1" target="_blank" class="cert-item">
+      <img src="photos/Cloud-prectitioner.png" alt="AWS Certificate">
+    </a>
+
+    <!-- Add more certificates as needed -->
+    <a href="https://www.credly.com/earner/earned/badge/17e639c7-8535-4122-a645-c5e31b6c9617" target="_blank" class="cert-item">
+      <img src="photos/solution-architect.png" alt="Another Certificate">
+    </a>
+    
+    <!-- Certificate 3 -->
+    <a href="https://www.credly.com/earner/earned/badge/633b81d1-0b5a-496f-a9ef-8937acbf3a70" target="_blank" class="cert-item">
+      <img src="photos/RHCSA.png" alt="Third Certificate">
+    </a>
+
+  </div>
+</section>
+    
+
+
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2>Get in Touch</h2>
             <div class="contact-grid">
 
+                <a href="https://www.linkedin.com/in/parthrajg0hil/" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <span>Connect on LinkedIn</span>
+                </a>                  
+
                 <a href="https://parth-raj.medium.com/" class="contact-card">
                     <i class="fab fa-medium"></i>
                     <span>Follow on Medium</span>
                 </a> 
 
-                <a href="https://www.linkedin.com/in/parthrajg0hil/" class="contact-card">
-                    <i class="fab fa-linkedin"></i>
-                    <span>Connect on LinkedIn</span>
-                </a>                
 
                 <a href="https://github.com/2002-parthraj" class="contact-card">
                     <i class="fab fa-github"></i>
